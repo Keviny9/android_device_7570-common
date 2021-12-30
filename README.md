@@ -1,1 +1,2 @@
 # Android_device_7570-common_lineage
+Forked from RunningMango/android_device_7570-common_lineage
