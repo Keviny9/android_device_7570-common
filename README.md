@@ -1,1 +1,1 @@
-# adroid_device_7570-common_lineage
+# Android_device_7570-common_lineage
