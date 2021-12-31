@@ -3,8 +3,13 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter on5xelte, $(TARGET_DEVICE)),)
+#ifneq ($(filter on5xelte, $(TARGET_DEVICE)),)
 
-include $(call all-makefiles-under,$(LOCAL_PATH))
+#include $(call all-makefiles-under,$(LOCAL_PATH))
+
+ifeq ($(TARGET_DEVICE),on5xelte)
+
+include $(call all-subdir-makefiles,$(LOCAL_PATH))
+include $(CLEAR_VARS)
 
 endif
