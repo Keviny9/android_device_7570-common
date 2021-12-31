@@ -141,4 +141,4 @@ endif
 TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)/releasetools
 
 # Inherit from the proprietary version
--include vendor/samsung/on5xelte/BoardConfigVendor.mk
+-include vendor/samsung/universal7570-commom/BoardConfigVendor.mk

@@ -107,4 +107,4 @@ PRODUCT_PACKAGES += \
 -include $(LOCAL_PATH)/system_prop.mk
 
 # Call proprietary blob setup
-$(call inherit-product, vendor/samsung/on5xelte/universal7570-common-vendor.mk)
+$(call inherit-product, vendor/samsung/universal7570-common/universal7570-common-vendor.mk)
