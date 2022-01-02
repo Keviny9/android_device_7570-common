@@ -4,6 +4,10 @@ hal_server_domain(hal_power_7570, hal_power)
 type hal_power_7570_exec, exec_type, file_type;
 init_daemon_domain(hal_power_7570)
 
+#type debugfs_wlan, file_type, sysfs_type
+
 allow hal_power_7570 cgroup:file rw_file_perms;
 allow hal_power_7570 sysfs:file rw_file_perms;
 allow hal_power_7570 sysfs_devices_system_cpu:file rw_file_perms;
+
+#allow hal_power_7570 debugfs_wlan:file { open getattr read search ioctl lock };

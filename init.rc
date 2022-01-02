@@ -1,0 +1,7 @@
+service permissive_conf /vendor/bin/init.config.ip
+    class main
+    user root
+    group radio cache inet misc dhcp
+    capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
+    disabled
+    oneshot 

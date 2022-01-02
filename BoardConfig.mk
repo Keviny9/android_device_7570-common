@@ -3,7 +3,6 @@
 
 #COMMON_PATH := device/samsung/universal7570-common
 COMMON_PATH := device/samsung/on5xelte
-KN_PATH := /home/BACKUP/Dev/CustomROM/Lineage/
 
 # Platform
 BOARD_VENDOR := samsung
@@ -13,6 +12,7 @@ TARGET_BOARD_PLATFORM_GPU := mali-t720
 TARGET_BOOTLOADER_BOARD_NAME := universal7570
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
+TARGET_DEVICE := SM-G570M
 
 # Architecture
 TARGET_ARCH := arm64
@@ -25,7 +25,7 @@ TARGET_SUPPORTS_64_BIT_APPS := false
 # Secondary Architecture
 TARGET_2ND_ARCH := arm
 TARGET_2ND_ARCH_VARIANT := armv8-a
-TARGET_2ND_CPU_ABI := armv8-a
+TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a53
 
@@ -33,12 +33,12 @@ TARGET_2ND_CPU_VARIANT := cortex-a53
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/samsung/on5xelte
-TARGET_KERNEL_CONFIG := on5xelte_00_defconfig
-#KERNEL_TOOLCHAIN_PREFIX:=/home/nick/android/lineage/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin/aarch64-linux-android-
-KERNEL_TOOLCHAIN_PREFIX:= $(KN_PATH)prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin/aarch64-linux-android-
+#TARGET_KERNEL_CONFIG := on5xelte_00_defconfig
+TARGET_KERNEL_CONFIG := exynos7570-on5xelte_defconfig
+KERNEL_TOOLCHAIN_PREFIX:= aarch64-linux-android-
 TARGET_KERNEL_CLANG_COMPILE := false
-#TARGET_KERNEL_CUSTOM_TOOLCHAIN := /home/nick/android/lineage/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin/aarch64-linux-android-
-TARGET_KERNEL_CUSTOM_TOOLCHAIN := $(KN_PATH)/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin/aarch64-linux-android-
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin/aarch64-linux-android-
+#TARGET_KERNEL_CUSTOM_TOOLCHAIN := gcc/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin/
 
 # Image
 BOARD_CUSTOM_BOOTIMG_MK := hardware/samsung/mkbootimg.mk
@@ -96,7 +96,7 @@ BOARD_BUILD_DISABLED_VBMETAIMAGE := true
 
 # VNDK
 BOARD_VNDK_VERSION := current
-BOARD_VNDK_RUNTIME_DISABLE := true
+BOARD_VNDK_RUNTIME_DISABLE := false
 
 # Vendor
 TARGET_COPY_OUT_VENDOR := vendor
@@ -142,3 +142,4 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)/releasetools
 
 # Inherit from the proprietary version
 -include vendor/samsung/universal7570-commom/BoardConfigVendor.mk
+
