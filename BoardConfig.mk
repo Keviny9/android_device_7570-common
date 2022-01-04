@@ -107,7 +107,7 @@ BOARD_VNDK_VERSION := current
 BOARD_VNDK_RUNTIME_DISABLE := false
 
 # Vendor
-TARGET_COPY_OUT_VENDOR := /vendor
+TARGET_COPY_OUT_VENDOR := vendor
 
 # Enable 64-bits binder
 TARGET_USES_64_BIT_BINDER := true
