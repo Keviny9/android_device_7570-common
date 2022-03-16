@@ -1,0 +1,11 @@
+
+[
+  {
+    "repository": "android_device_7570-common_lineage",
+    "target_path": "device/samsung/on5xelte"
+  },
+  {
+    "repository": "android_kernel_on5xelte_oreo",
+    "target_path": "kernel/samsung/on5xelte"
+  } 
+]
