@@ -47,7 +47,7 @@ TARGET_CPU_VARIANT_RUNTIME := cortex-a53
 TARGET_BOARD_SUFFIX := _64
 TARGET_USES_64_BIT_BINDER := true
 BUILD_BROKEN_DUP_RULES := true
-BUILD_BROKEN_PHONY_TARGETS := true
+#BUILD_BROKEN_PHONY_TARGETS := true
 
 # Kernel
 TARGET_KERNEL_ARCH := arm64
@@ -119,7 +119,7 @@ BOARD_BUILD_DISABLED_VBMETAIMAGE := true
 
 # VNDK
 BOARD_VNDK_VERSION := current
-BOARD_VNDK_RUNTIME_DISABLE := false
+#BOARD_VNDK_RUNTIME_DISABLE := false
 
 # Vendor
 TARGET_COPY_OUT_VENDOR := vendor
@@ -152,13 +152,13 @@ BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
 
 # SELinux
-BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/private
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
 
 # Lineage hardware
-ifneq ($(findstring lineage, $(TARGET_PRODUCT)),)
-BOARD_HARDWARE_CLASS := \
-    hardware/samsung/lineagehw
-endif
+#ifneq ($(findstring lineage, $(TARGET_PRODUCT)),)
+#BOARD_HARDWARE_CLASS := \
+#    hardware/samsung/lineagehw
+#endif
 
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)/releasetools
