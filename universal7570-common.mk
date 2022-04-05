@@ -48,7 +48,7 @@ PRODUCT_PACKAGES += \
 
 # HIDL
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/compatibility_matrix.xml:system/compatibility_matrix.xml
+    $(LOCAL_PATH)/vintf_fragments.xml:system/vintf_fragments.xml
 
 # Audio
 USE_XML_AUDIO_POLICY_CONF := 1
