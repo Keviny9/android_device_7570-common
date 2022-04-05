@@ -19,7 +19,7 @@ TARGET_DEVICE := SM-G570M
 #  TARGET_ARCH_VARIANT := armeabi-v7a-neon
 #  TARGET_CPU_ABI := armeabi-v7a
 #  TARGET_CPU_ABI2 := armeabi
-# ARCH_ARM_HAVE_NEON := true
+#  ARCH_ARM_HAVE_NEON := true
 
 # Architecture arm64
 #TARGET_ARCH := arm64
