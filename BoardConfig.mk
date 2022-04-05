@@ -14,26 +14,40 @@ TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
 TARGET_DEVICE := SM-G570M
 
-# Architecture
+# Architecture neon
 #  TARGET_ARCH := arm
 #  TARGET_ARCH_VARIANT := armeabi-v7a-neon
 #  TARGET_CPU_ABI := armeabi-v7a
 #  TARGET_CPU_ABI2 := armeabi
 # ARCH_ARM_HAVE_NEON := true
-TARGET_ARCH := arm64
+
+# Architecture arm64
+#TARGET_ARCH := arm64
+#TARGET_ARCH_VARIANT := armv8-a
+#TARGET_CPU_ABI := arm64-v8a
+#TARGET_CPU_ABI2 := armeabi-v7a
+#TARGET_CPU_VARIANT := cortex-a53
+#TARGET_SUPPORTS_64_BIT_APPS := false
+
+TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv8-a
-TARGET_CPU_ABI := arm64-v8a
-#TARGET_CPU_ABI := armeabi-v7a
-TARGET_CPU_ABI2 := armeabi-v7a
+TARGET_CPU_ABI := armeabi-v7a
+TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_VARIANT := cortex-a53
-TARGET_SUPPORTS_64_BIT_APPS := false
+TARGET_CPU_VARIANT_RUNTIME := cortex-a53
 
 # Secondary Architecture
-TARGET_2ND_ARCH := arm
-TARGET_2ND_ARCH_VARIANT := armv8-a
-TARGET_2ND_CPU_ABI := armeabi-v7a
-TARGET_2ND_CPU_ABI2 := armeabi
-TARGET_2ND_CPU_VARIANT := cortex-a53
+#TARGET_2ND_ARCH := arm
+#TARGET_2ND_ARCH_VARIANT := armv8-a
+#TARGET_2ND_CPU_ABI := armeabi-v7a
+#TARGET_2ND_CPU_ABI2 := armeabi
+#TARGET_2ND_CPU_VARIANT := cortex-a53
+
+# Binder
+TARGET_BOARD_SUFFIX := _64
+TARGET_USES_64_BIT_BINDER := true
+BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_PHONY_TARGETS := true
 
 # Kernel
 TARGET_KERNEL_ARCH := arm64
@@ -42,9 +56,10 @@ TARGET_KERNEL_SOURCE := kernel/samsung/on5xelte
 #TARGET_KERNEL_CONFIG := on5xelte_00_defconfig
 TARGET_KERNEL_CONFIG := exynos7570-on5xelte_defconfig
 KERNEL_TOOLCHAIN_PREFIX:= aarch64-linux-android-
+#KERNEL_TOOLCHAIN_PREFIX:= arm-linux-androideabi-
 TARGET_KERNEL_CLANG_COMPILE := false
 TARGET_KERNEL_CUSTOM_TOOLCHAIN := prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin/aarch64-linux-android-
-#TARGET_KERNEL_CUSTOM_TOOLCHAIN := gcc/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin/
+#TARGET_KERNEL_CUSTOM_TOOLCHAIN := prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-
 
 # Image
 BOARD_CUSTOM_BOOTIMG_MK := hardware/samsung/mkbootimg.mk
